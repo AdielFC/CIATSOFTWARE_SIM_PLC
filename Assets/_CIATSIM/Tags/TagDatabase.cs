@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using CIATSIM.SoftPLC;
 
-public class TagDatabase : MonoBehaviour
+// ICampoPLC: el ciclo de scan usa TagDatabase como "los cables" del PLC.
+public class TagDatabase : MonoBehaviour, ICampoPLC
 {
     [SerializeField]
     private List<PlcTag> tags = new List<PlcTag>();
